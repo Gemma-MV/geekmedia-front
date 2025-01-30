@@ -1,0 +1,131 @@
+/* Estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    height: 650px;
+    background: #fffaf1;
+}
+
+/* Estilos header */
+header{
+    height: 200px;
+    background: #d6eaeb;
+    color: #f9a10f;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    align-items: center;
+}
+
+.logoHeader{
+    width: 200px;
+}
+
+.divH1{
+    text-align: center;
+}
+
+h1{
+    margin: 0 0 20px;
+    font-size: 3.3em;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-shadow: 1px 1px 3px #000000bf;
+}
+
+.divH1 p{
+    font-size: 1.3em;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.btnLogin{
+    padding: 5px 10px 5px 15px;
+    background: #f9a10f;
+    color: #b8cbcd;
+    font-size: 1.5em;
+    font-weight: bolder;
+    border: 2px solid #b8cbcd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btnLogin:hover{
+    background: #b8cbcd;
+    color: #f9a10f;
+    border: 2px solid #f9a10f;
+    box-shadow: 2px 2px 2px gray;
+}
+
+.imgLogin{
+    width: 40px;
+}
+
+.navBar{
+    background: #1b829e;
+}
+
+.navBar ul{
+    margin-left: 65px;
+    display: flex;
+}
+
+.navBar li{
+    margin: 15px 30px;
+    list-style-type: none;
+}
+
+.navBar a{
+    color: #f9a10f;
+    font-size: 1.2em;
+    font-weight: bolder;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 1px;
+}
+
+.navBar a:hover{
+    color: #d6eaeb;
+}
+
+footer{
+    height: 50px;
+    background: #d6eaeb;
+    color: #f9a10f;
+    font-size: 1.2em;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Azul Espacial (#0033A0): Para un toque de aventura y exploración.
+
+Verde Láser (#00FF00): Un guiño a la tecnología y lo futurista.
+
+Amarillo Supernova (#FFD700): Energía y entusiasmo.
+
+Púrpura Galáctico (#800080): Creatividad y misterio.
+
+Gris Cósmico (#B0C4DE): Para un equilibrio neutro y moderno. */
+
+
+/* Azul: #1E90FF
+
+Naranja: #FFA500
+
+Amarillo: #FFD700
+
+Verde: #32CD32
+
+Rojo: #FF4500
+
+Rosa: #FF69B4
+
+Blanco: #FFFFFF (para el fondo) */

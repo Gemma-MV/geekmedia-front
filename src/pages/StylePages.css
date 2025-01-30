@@ -1,0 +1,13 @@
+.divHome{
+    height: 650px;
+    margin: 0 15%;
+    background: linear-gradient(#f9a10fa1, #fffaf1, transparent);
+}
+
+.h2Home{
+    padding: 50px 50px;
+    color: #1b829e;
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 1px;
+}
