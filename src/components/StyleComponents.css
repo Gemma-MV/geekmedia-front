@@ -93,6 +93,20 @@ h1{
     color: #d6eaeb;
 }
 
+.divProducts{
+    height: 650px;
+    margin: 0 15%;
+    background: linear-gradient(#f9a10fa1, #fffaf1, transparent);
+}
+
+.h2Products{
+    padding: 50px 50px;
+    color: #1b829e;
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
 footer{
     height: 50px;
     background: #d6eaeb;

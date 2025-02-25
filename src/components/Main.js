@@ -1,10 +1,10 @@
 import React from 'react'; 
-import HomeTwo from '../pages/HomeTwo';
+import Products from './Products';
 
 export default function Main() {
     return (
         <main className='main'>
-            <HomeTwo />
+            <Products />
         </main>
     )
 }
