@@ -5,12 +5,7 @@
     box-sizing: border-box;
 }
 
-.main{
-    height: 650px;
-    background: #fffaf1;
-}
-
-/* Estilos header */
+/* Estilos Header */
 header{
     height: 200px;
     background: #d6eaeb;
@@ -22,6 +17,7 @@ header{
 
 .logoHeader{
     width: 200px;
+    margin-left: 30px;
 }
 
 .divH1{
@@ -93,9 +89,16 @@ h1{
     color: #d6eaeb;
 }
 
+/* Estilos Main */
+.main{
+    min-height: 100%;
+    background: #fffaf1;
+}
+
+/* Estilos Products */
 .divProducts{
-    height: 650px;
-    margin: 0 15%;
+    margin: 0 10%;
+    padding-bottom: 50px;
     background: linear-gradient(#f9a10fa1, #fffaf1, transparent);
 }
 
@@ -107,6 +110,67 @@ h1{
     letter-spacing: 1px;
 }
 
+.divBooks, .divMovies, .divMusic{
+    margin: 0 30px 50px;
+    padding: 20px;
+    background: #d6eaeb6b;
+    border: 1px solid #1b829e5c;
+    border-radius: 20px;
+}
+.divBooks h3, .divMovies h3, .divMusic h3{
+    margin: 20px 0;
+    color: #f9a10f;
+    text-align: center;
+    font-size: 1.6em;
+    text-shadow: 1px 1px 1px #000000bf;
+}
+.divOneBook, .divOneMovie, .divOneMusic{
+    display: flex;
+}
+.indexBook, .indexMovies, .indexMusic{
+    width: 20%;
+    margin: 5px;
+    padding: 20px;
+    background: #d6eaeb;
+    border: 1px solid #1b829e5c;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px #1b829e5c;
+}
+.bookTitle, .movieTitle, .musicTitle{
+    min-height: 40px;
+    margin-bottom: 10px;
+    color: #1b829e;
+    font-size: 1em;
+}
+.bookPrice, .moviePrice, .musicPrice{
+    margin-bottom: 10px;
+    color: #f9a10f;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: flex-end;
+}
+.bookDescription, .movieDescription, .musicDescription{
+    font-size: 0.9em;
+}
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inline;
+}
+.show-more-btn{
+    background: #d6eaeb;
+    color: #f9a10f;
+    font-size: 0.8em;
+    border: none;
+    cursor: pointer;
+}
+.show-more-btn:hover{
+    color: #1b829e;
+}
+
+/* Estilos Footer */
 footer{
     height: 50px;
     background: #d6eaeb;
@@ -118,28 +182,3 @@ footer{
     align-items: center;
     justify-content: center;
 }
-
-/* Azul Espacial (#0033A0): Para un toque de aventura y exploración.
-
-Verde Láser (#00FF00): Un guiño a la tecnología y lo futurista.
-
-Amarillo Supernova (#FFD700): Energía y entusiasmo.
-
-Púrpura Galáctico (#800080): Creatividad y misterio.
-
-Gris Cósmico (#B0C4DE): Para un equilibrio neutro y moderno. */
-
-
-/* Azul: #1E90FF
-
-Naranja: #FFA500
-
-Amarillo: #FFD700
-
-Verde: #32CD32
-
-Rojo: #FF4500
-
-Rosa: #FF69B4
-
-Blanco: #FFFFFF (para el fondo) */

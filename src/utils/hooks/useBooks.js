@@ -23,6 +23,7 @@ useEffect(() => {
             const response = await fetchData({
                 endpoint: '/books/all-books'
             })
+            console.log('Response:', response);
             // Si existe una respuesta y la respuesta es mayor que 0, es decir, que contiene datos le decimos que actualice books con setbooks que contendra la respuesta
             if (response && response.length > 0) {
                 setbooks(response);

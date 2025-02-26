@@ -1,7 +1,6 @@
 // Importamos el hook useState para poder manejar el estado en los componentes
 import { useState } from 'react';
 
-//
 const useFetch = () => {
     // Aqui almacenamos cualquiere error que ocurra durante la solicitud de datos ( que ocurrira en useState) en fetchError y la actualizacion de lo sucedido la traemos con setFetchError y lo iniciamos como null ya que aun no ha cambiado de estado
     const [fetchError, setFetchError] = useState(null);
@@ -38,10 +37,12 @@ const useFetch = () => {
 
         // Usamos fetch para realizar la solicitud HTTP al servidor y su puerto, utilizando el endpoint y fetchOptions que contienen el método, encabezados y cuerpo definidos
         const response = await fetch(`http://${server}:${port}/geekmedia${endpoint}`, fetchOptions);
+        console.log('Fetching data from:', `http://${server}:${port}/geekmedia${endpoint}`);
 
         // Aqui si la respuesta no es exitosa nos retornara un array vacio 
         if (!response.ok) {
-            return [];
+            // return [];
+            throw new Error('Network response was not ok');
         }
         // Si la respuesta es exitosa la convertimos a un json y la retornamos 
         const data = await response.json();
@@ -49,6 +50,7 @@ const useFetch = () => {
         // Si ocurre un error lo capturamos, actualizamos el fetchError con setFetchError con el mensaje del error y lanzamos el error con throw err
         } catch (err) {
             setFetchError(err.message);
+            console.error("Fetch error:", err);
             throw err;
         }
     };
