@@ -64,6 +64,7 @@ h1{
 
 .navBar{
     background: #1b829e;
+    position: relative;
 }
 
 .navBar ul{
@@ -87,6 +88,12 @@ h1{
 
 .navBar a:hover{
     color: #d6eaeb;
+}
+.carrito{
+    width: 80px;
+    position: absolute;
+    right: 3%;
+    top: 15px;
 }
 
 /* Estilos Main */
@@ -136,6 +143,15 @@ h1{
     border-radius: 15px;
     box-shadow: 2px 2px 3px #1b829e5c;
 }
+.imgFlex{
+    display: flex;
+    justify-content: center;
+}
+.imgProducts{
+    height: 180px;
+    max-width: 200px;
+    margin: 10px 0 25px;
+}
 .bookTitle, .movieTitle, .musicTitle{
     min-height: 40px;
     margin-bottom: 10px;
@@ -146,6 +162,7 @@ h1{
     margin-bottom: 10px;
     color: #f9a10f;
     font-size: 0.9em;
+    font-weight: bold;
     display: flex;
     justify-content: flex-end;
 }
@@ -165,9 +182,33 @@ h1{
     font-size: 0.8em;
     border: none;
     cursor: pointer;
+    display: flex;
 }
 .show-more-btn:hover{
     color: #1b829e;
+}
+.btnFlex{
+    display: flex;
+    flex-direction: column;
+}
+.btnInfo{
+    width: 50%;
+    margin: 40px auto 30px;
+    padding: 8px 0;
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #b8cbcd;
+    background: #f9a10f;
+    border: 2px solid #b8cbcd;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btnInfo:hover{
+    background: #b8cbcd;
+    color: #f9a10f;
+    border: 2px solid #f9a10f;
+    box-shadow: 2px 2px 2px gray;
 }
 
 /* Estilos Footer */
