@@ -38,8 +38,10 @@ useEffect(() => {
     };
     // Hacemos la llamada a la funcion fetchBooks que contiene los datos de los libros que estan en el endpoint /books/all-books
     fetchBooks();
-// El array vacío ([]) indica que el efecto solo debe ejecutarse una vez, cuando el componente se monte
 }, []);
+
+
+// El array vacío ([]) indica que el efecto solo debe ejecutarse una vez, cuando el componente se monte
 // Retornamos un objeto que contiene books (el estado con la lista de libros) y navigate para el enrutado
 return { books, navigate };
 };

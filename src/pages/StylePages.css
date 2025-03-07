@@ -1,14 +1,224 @@
-/* Borrar todo esto */
-/* .divHome{
-    height: 650px;
-    margin: 0 15%;
-    background: linear-gradient(#f9a10fa1, #fffaf1, transparent);
+/* Estilos para los productos */
+.divMainProducts{
+    padding: 20px 0 40px;
+}
+.divBooks, .divMovies, .divMusic{
+    margin: 50px 70px 0;
+    padding: 20px;
+    background: #d6eaeb6b;
+    border: 1px solid #1b829e5c;
+    border-radius: 20px;
+}
+.divBooks h3, .divMovies h3, .divMusic h3{
+    margin: 20px 0;
+    color: #f9a10f;
+    text-align: center;
+    font-size: 1.6em;
+    text-shadow: 1px 1px 1px #000000bf;
+}
+.divOneBook, .divOneMovie, .divOneMusic{
+    display: flex;
+}
+.indexBook, .indexMovies, .indexMusic{
+    width: 20%;
+    margin: 5px;
+    padding: 20px;
+    background: #d6eaeb;
+    border: 1px solid #1b829e5c;
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px #1b829e5c;
+}
+.imgFlex{
+    display: flex;
+    justify-content: center;
+}
+.imgProducts{
+    height: 180px;
+    max-width: 200px;
+    margin: 10px 0 25px;
+}
+.bookTitle, .movieTitle, .musicTitle{
+    min-height: 40px;
+    margin-bottom: 10px;
+    color: #1b829e;
+    font-size: 1em;
+}
+.bookPrice, .moviePrice, .musicPrice{
+    margin-bottom: 10px;
+    color: #f9a10f;
+    font-size: 0.9em;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+}
+.bookDescription, .movieDescription, .musicDescription{
+    font-size: 0.9em;
+}
+.hidden {
+    display: none;
+}
+.visible {
+    display: inline;
+}
+.show-more-btn{
+    background: #d6eaeb;
+    color: #f9a10f;
+    font-size: 0.8em;
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+.show-more-btn:hover{
+    color: #1b829e;
+}
+.btnFlex{
+    display: flex;
+    flex-direction: column;
+}
+.btnBuy{
+    width: 50%;
+    margin: 40px auto 30px;
+    padding: 8px 0;
+    font-size: 1em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #b8cbcd;
+    background: #f9a10f;
+    border: 2px solid #b8cbcd;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btnBuy:hover{
+    background: #b8cbcd;
+    color: #f9a10f;
+    border: 2px solid #f9a10f;
+    box-shadow: 2px 2px 2px gray;
 }
 
-.h2Home{
-    padding: 50px 50px;
-    color: #1b829e;
+/* Estilos Register, Login y Form */
+.Register {
+    padding-bottom: 50px;
+    background: #fffaf1;
+}
+.genericH2{
+    padding: 50px 0;
+    color: #f9a10f;
     font-size: 2em;
     text-align: center;
     letter-spacing: 1px;
-} */
+}
+.formRegister{
+    margin: 0 25%;
+    padding: 40px 5%;
+    background: #d6eaeb6b;
+    border: 1px solid #1b829e5c;
+    border-radius: 20px;
+}
+.formFlex{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.formRegister label{
+    color: #1b829e;
+    font-weight: 500;
+}
+.formRegister input{
+    width: 70%;
+    height: 23px;
+    color: #f9a10f;
+    padding: 5px 10px;
+    border: 1px solid #1b829e;
+    border-radius: 5px;
+}
+.formRegister input:focus{
+    color: #1b829e;
+    border: 1px solid #f9a10f;
+    outline: none;
+}
+.divForm-btn{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.form-btn{
+    width: 30%;
+    margin-bottom: 20px;
+    padding: 5px 10px 5px 15px;
+    color: #1b829e;
+    background: #b8cbcd;
+    font-size: 1em;
+    font-weight: bold;
+    border: 1px solid #1b829e;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.form-btn:hover{
+    color: #f9a10f;
+    border: 1px solid #f9a10f;
+}
+
+/* Estilos solo Login */
+.Login{
+    padding-bottom: 50px;
+}
+.formLogin{
+    margin: 30px 30% 35px;
+    padding: 40px 5%;
+    background: #d6eaeb6b;
+    border: 1px solid #1b829e5c;
+    border-radius: 20px;
+}
+.loginFlex{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.loginFlex label{
+    margin-bottom: 10px;
+    color: #1b829e;
+    font-size: 1.2em;
+    font-weight: 500;
+} 
+.loginFlex input{
+    width: 100%;
+    height: 30px;
+    color: #f9a10f;
+    padding: 5px 10px;
+    font-size: 1em;
+    border: 1px solid #1b829e;
+    border-radius: 5px;
+}
+.loginFlex input:focus{
+    color: #1b829e;
+    border: 1px solid #f9a10f;
+    outline: none;
+}
+.divLogin-btn{
+    display: flex;
+    justify-content: center;
+}
+.login-btn{
+    width: 30%;
+    margin: 20px 0;
+    padding: 8px 10px 8px 15px;
+    color: #1b829e;
+    background: #b8cbcd;
+    font-size: 1em;
+    font-weight: bold;
+    border: 1px solid #1b829e;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.login-btn:hover{
+    color: #f9a10f;
+    border: 1px solid #f9a10f;
+}
+
+/* Estilos Shopping */
+.shoppingCart{
+    min-height: 500px;
+}

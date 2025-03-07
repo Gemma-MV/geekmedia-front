@@ -4,13 +4,13 @@ import useFetch from "./useFetch.js";
 
 export const useMusic = () => {
 
-const [music, setmusic] = useState([]);
+const [musicList, setmusicList] = useState([]);
 const { fetchError, fetchData } = useFetch();
 const navigate = useNavigation();
 
 useEffect(() => {
 
-    const fetchMusic = async () => {
+    const fetchMusicList = async () => {
 
         try {
             const response = await fetchData({
@@ -18,7 +18,7 @@ useEffect(() => {
             })
             console.log('Response:', response);
             if (response && response.length > 0) {
-                setmusic(response);
+                setmusicList(response);
             } else {
                 console.error("Error en la respuesta del servidor:", fetchError);
             }
@@ -26,8 +26,8 @@ useEffect(() => {
             console.error("Error en la solicitud:", error);
         }
     };
-    fetchMusic();
+    fetchMusicList();
 }, []);
 
-return { music, navigate };
+return { musicList, navigate };
 };
