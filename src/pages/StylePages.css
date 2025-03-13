@@ -164,6 +164,13 @@
 .Login{
     padding-bottom: 50px;
 }
+.registerH2{
+    padding: 60px 0 40px;
+    color: #f9a10f;
+    font-size: 2em;
+    text-align: center;
+    letter-spacing: 1px;
+}
 .formLogin{
     margin: 30px 30% 35px;
     padding: 40px 5%;

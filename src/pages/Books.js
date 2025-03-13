@@ -1,14 +1,16 @@
-// En la importacion de React importamos tambien el hook por defecto useState para poder utilizarlo
+// En la importacion de React importamos tambien el hook por defecto useState para poder utilizar el estado de los productos, esto sirve para poder manejar cuando cambia su estado, en nuestro caso si despiega o no el ver mas. E importamos tambien el useContext para poder manejar el contexto, en nuestro caso nos permite acceder a información compartida, como el carrito de compras, desde cualquier lugar de nuestra aplicación
 import React, { useState, useContext } from 'react';
 // Hacemos la importacion de useBooks que contiene el fetch que trae del back el endpoint /books/all-books
 import { useBooks } from '../utils/hooks/useBooks.js';
+// Importamos la pagina de Shopping que contiene nuestro carrito de la compra
 import { CartContext } from './Shopping.js'; 
 import './StylePages.css';
 
 // Declaramos la funcion que contiene los libros y que vamos a exportar tanto a la pagina principal como al link de navegacion de libros del header
 export default function Books() {
     // Guardamos en la variable books el valor de la funcion useBooks que contiene el fetch de todos los libros para que sea mas facil de usar
-    const { books} = useBooks();
+    const { books } = useBooks();
+    // Guardamos en la variable addToCart el contenido del carrito que esta en Shopping.js de tal manera que cuando añadamos un producto se metera en el carrito
     const { addToCart } = useContext(CartContext); 
     // Guardamos en la constante showMore la informacion sobre si debe mostrarse o no el resto de la descripcion del libro y en setShowMore usamos el hook useState para recoger el cambio de estado de showMore
     const [showMore, setShowMore] = useState({});
@@ -42,6 +44,7 @@ export default function Books() {
                         <div className='btnFlex'>
                             {/* Aqui tenemos el boton para ver mas/ver menos. En el onclick llamamos a la funcion handleToggle, segun su id para que lo ejecute de manera independiente */}
                             <button className='show-more-btn' onClick={() => handleToggle(book._id)}> {showMore[book._id] ? "...ver menos" : "...ver más"} </button>
+                            {/* Aqui cuando el usuario hace click en el boton se ejecuta la funcion addToCart, en este caso para book y lo añade al carrito */}
                             <button className='btnBuy' onClick={() => addToCart(book)}>Comprar</button>
                         </div>
                     </div>

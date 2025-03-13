@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { useForm } from '../utils/hooks/useForm.js';
+// import { useNavigation } from '../utils/hooks/useNavigation';
 import './StylePages.css';
 
 export default function Form() {
@@ -18,6 +20,9 @@ export default function Form() {
         postalCode: '',
         phone: '',
       });
+
+      const { user } = useForm();
+    //   const navigate = useNavigation();
     
     // Llamamos a esta funcion handleChange (manejar el cambio) cada vez que escribimos algo en el formulario. Name es nombre del name del input, value el valor del name del input y e.target representa el campo que está siendo modificado, con setFormData actualiza el estado del formulario manteniendo los valores existentes pero cambiando el que se acaba de modificar con prevData que nos da el dato anterior y lo cambiamos por el contenido de [name]: value. Con esta funcion lo que hacemos es que cuando haya un cambio en el onChange del input registre el cambio y lo guarde en la constante formData que contiene los datos del formulario
     const handleChange = (e) => {

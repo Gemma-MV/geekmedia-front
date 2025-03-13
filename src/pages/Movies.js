@@ -1,16 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState, useContext } from 'react';
 import { useMovies } from '../utils/hooks/useMovies.js';
+import { CartContext } from './Shopping.js'; 
 import './StylePages.css';
 
 export default function Movies() {
     const { movies } = useMovies();
+    const { addToCart } = useContext(CartContext); 
     const [showMore, setShowMore] = useState({});
 
     const handleToggle = (id) => {
-        setShowMore((prevState) =>({
-            ...prevState,
-            [id]: !prevState[id],
-        }));
+        setShowMore((prevState) => ({ ...prevState, [id]: !prevState[id] }));
     };
 
     return (
@@ -31,7 +30,7 @@ export default function Movies() {
                             )}
                         <div className='btnFlex'>
                             <button className='show-more-btn' onClick={() => handleToggle(movie._id)}> {showMore[movie._id] ? "...ver menos" : "...ver más"} </button>
-                            <button className='btnBuy'>Comprar</button>
+                            <button className='btnBuy' onClick={() => addToCart(movie)}>Comprar</button>
                         </div>
                     </div>
                     ))}

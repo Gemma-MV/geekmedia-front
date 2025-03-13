@@ -1,16 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState, useContext } from 'react';
 import { useMusic } from '../utils/hooks/useMusic.js';
+import { CartContext } from './Shopping.js'; 
 import './StylePages.css';
 
 export default function Music() {
     const { musicList } = useMusic();
+    const { addToCart } = useContext(CartContext); 
     const [showMore, setShowMore] = useState({});
 
     const handleToggle = (id) => {
-        setShowMore((prevState) =>({
-            ...prevState,
-            [id]: !prevState[id],
-        }));
+        setShowMore((prevState) => ({ ...prevState, [id]: !prevState[id] }));
     };
 
     return (
@@ -31,7 +30,7 @@ export default function Music() {
                             )}
                         <div className='btnFlex'>
                             <button className='show-more-btn' onClick={() => handleToggle(music._id)}> {showMore[music._id] ? "...ver menos" : "...ver más"} </button>
-                            <button className='btnBuy'>Comprar</button>
+                            <button className='btnBuy' onClick={() => addToCart(music)}>Comprar</button>
                         </div>
                     </div>
                     ))}
